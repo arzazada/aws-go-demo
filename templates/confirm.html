@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Sign Up</title>
+</head>
+<body>
+<h1>Confirm Sign Up</h1>
+<p>A confirmation code has been sent to your email address. Please enter the code below:</p>
+{{if .Error}}
+<p style="color: red">{{.Error}}</p>
+{{end}}
+<form method="post" action="/confirm">
+    <label for="confirmation_code">Confirmation Code:</label>
+    <input type="text" id="confirmation_code" name="confirmation_code" required><br>
+    <input type="hidden" id="email" name="email" value="{{.email}}">
+    <input type="submit" value="Confirm">
+</form>
+</body>
+</html>

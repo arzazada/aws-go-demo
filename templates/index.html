@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head><title>EC2 Instance Metadata</title></head>
+<body>
+<h2>User Email: {{.Email}}</h2>
+<h1>EC2 Instance Metadata</h1>
+<p><strong>Instance ID:</strong> {{.InstanceId}}</p>
+<p><strong>Private IP:</strong> {{.PrivateIp}}</p>
+<h2>Last 5 log entries:</h2>
+<ul>
+    {{range .Records}}
+    <li>SourceIP: {{.Ip}}, Timestamp: {{.Timestamp}}, User Email: {{.Email}} </li>
+    {{end}}
+</ul>
+<form method="POST" action="/log">
+    <button type="submit">LOG</button>
+</form>
+<form method="GET" action="/logout">
+    <button type="submit">Sign out</button>
+</form>
+</body>
+</html>
