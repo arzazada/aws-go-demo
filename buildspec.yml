@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+      - go build -o main
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - main
+    - templates/**/*
+    - scripts/**/*
+    - appspec.yml
+    - .env
