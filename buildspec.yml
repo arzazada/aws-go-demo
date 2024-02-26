@@ -1,9 +1,6 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      golang: "$GO_VERSION"
   build:
     commands:
       - cat /etc/os-release
