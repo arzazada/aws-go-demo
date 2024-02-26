@@ -1,3 +1,3 @@
 #!/bin/bash
 
-systemctl start demo-app
+systemctl start demo-app 
