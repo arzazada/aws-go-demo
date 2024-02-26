@@ -5,7 +5,7 @@ phases:
     commands:
       - cat /etc/os-release
       - echo Build started on `date`
-      - go build -o main
+      - GOOS=linux GOARCH=amd64 go build -o main
 
   post_build:
     commands:
