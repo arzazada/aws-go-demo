@@ -17,4 +17,4 @@ artifacts:
     - templates/**/*
     - scripts/**/*
     - appspec.yml
-    - .env
+    - .env 
